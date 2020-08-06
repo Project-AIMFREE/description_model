@@ -1,0 +1,61 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"name": "Mobile_Robot",
+	"revision": "0.0.1",
+	"description": "Schema of mobile Robot",
+	"id": "123",
+	"properties": {
+		"name": {
+			"$ref": "#/definitions/name"
+		},
+		"revision": {
+			"type": "string",
+			"pattern": "^\\d*\\.\\d*\\.\\d*$"
+		},
+		"description": {
+			"type": "string"
+		},
+		"id": {
+			"type": "string"
+		},
+		"submodels": {
+			"properties": {	
+				"location": {
+					"$ref": "https://raw.githubusercontent.com/boschresearch/assets2036-submodels/master/location.json"
+				},
+				"state": {
+					"$ref": "#/definitions/state"
+				},
+				"light": {
+					"$ref": "https://git-ce.rwth-aachen.de/wzl-mq-ms/forschung-lehre/digital-assembly/des/-/blob/rch/MQTT_Test/light.json"
+				}
+			},
+			"required": [
+				"light",
+				"location",
+				"state"
+			]
+		}
+	},
+	"required": [
+		"submodels"
+	],
+	"definitions": {
+		"state": {
+			"name": "state",
+			"revision": "0.0.1",
+			"description": "describes the current state of a ressource whether it is idle.",
+			"properties": {
+				"state": {
+					"type": "string"
+				}
+			}
+		},
+		"name": {
+			"type": "string",
+			"pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+			"minLength": 3
+		}
+	}
+}
