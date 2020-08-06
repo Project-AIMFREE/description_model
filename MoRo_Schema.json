@@ -20,15 +20,18 @@
 			"type": "string"
 		},
 		"submodels": {
-			"properties": {	
+			"properties": {
+				"capabilities":{
+				"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/capabilities_schema.json#"
+				},
 				"location": {
-					"$ref": "https://raw.githubusercontent.com/boschresearch/assets2036-submodels/master/location.json"
+					"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/location.json#"
 				},
 				"state": {
-					"$ref": "https://git-ce.rwth-aachen.de/wzl-mq-ms/forschung-lehre/digital-assembly/des/-/blob/rch/MQTT_Test/state.json"
+					"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/state.json#"
 				},
 				"light": {
-					"$ref": "https://git-ce.rwth-aachen.de/wzl-mq-ms/forschung-lehre/digital-assembly/des/-/blob/rch/MQTT_Test/light.json"
+					"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/light.json#"
 				}
 			},
 			"required": [

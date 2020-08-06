@@ -4,6 +4,11 @@
 	"description": "Mobile Robot 1",
 	"id": "1234",
 	"submodels": {
+		"capabilities": {
+			"drilling": {},
+			"grab": {},
+			"move": {}
+		},
 		"state": {
 			"state": "idle"
 		},
@@ -22,7 +27,7 @@
 			"light_on": true
 		},
 		"light": {
-		"name": "light2",
+			"name": "light2",
 			"light_on": true
 		}
 	}
