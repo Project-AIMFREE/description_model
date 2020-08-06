@@ -8,10 +8,14 @@
 		},
 		"id": {
 			"type": "string"
-		}
-		"properties":{}
+		},
+		"properties": {}
 	},
-	"required": [name, id, properties],
+	"required": [
+		"name",
+		"id",
+		"properties"
+	],
 	"events": {},
 	"operations": {}
 }
