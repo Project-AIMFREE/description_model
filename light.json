@@ -1,5 +1,4 @@
 {
-	"light": {
 		"name": "light",
 		"revision": "0.0.1",
 		"description": "describes a single switchable light source",
@@ -35,5 +34,4 @@
 				}
 			}
 		}
-	}
 }

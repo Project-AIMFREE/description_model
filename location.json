@@ -1,5 +1,4 @@
 {
-	"location": {
 		"name": "location",
 		"revision": "0.0.1",
 		"description": "a position estimation in 3d space with information about its confidence",
@@ -40,5 +39,4 @@
 				}
 			}
 		}
-	}
 }
