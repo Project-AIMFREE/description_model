@@ -9,7 +9,8 @@
 		"id": {
 			"type": "string"
 		},
-		"properties": {}
+		"properties": {
+		}
 	},
 	"required": [
 		"name",
