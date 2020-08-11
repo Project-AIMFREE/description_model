@@ -1,4 +1,4 @@
-{ "id":"12345",
-	"revision":5,
+{ "id":"test",
+	"revision":"test",
 	"additional":"test"
 }
