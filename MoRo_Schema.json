@@ -1,12 +1,9 @@
-{	
-	"properties": {
-		"allOf":[
-			{"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/Ressource_schema.json#/properties"
-			}
-		],
-		"description": {
-			"type": "string"
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"allOf":[
+		{"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/Ressource_schema.json#/properties"
 		},
+	{"properties": {
 		"submodels": {
 			"properties": {
 				"capabilities": {
@@ -31,12 +28,5 @@
 	},
 	"required": [
 		"submodels","revision","ID"
-	],
-	"definitions": {
-		"name": {
-			"type": "string",
-			"pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
-			"minLength": 3
-		}
-	}
+	]}]
 }
