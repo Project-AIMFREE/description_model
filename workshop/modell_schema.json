@@ -24,8 +24,8 @@
 			"minLength": 3
 		},
 		"revision": {
-			"type": "string",
-			"pattern": "^\\d*\\.\\d*\\.\\d*$"
+			"type": "number"
+
 			},
 		"description": {
 			"type": "string"
