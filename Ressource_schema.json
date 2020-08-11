@@ -20,9 +20,6 @@
 		}
 	},
 	"required": [
-		"name",
-		"revision",
-		"id"
 	],
 	"definitions": {	
 	"name": {

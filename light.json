@@ -10,7 +10,6 @@
 				"description": "true if light is on"
 			}
 		},
-		"required":["light_on", "name"],
 		"events": {
 			"light_switched": {
 				"description": "triggered whenever the light is switched, parameter 'state' tells if on or off",

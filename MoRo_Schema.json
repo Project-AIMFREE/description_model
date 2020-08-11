@@ -1,28 +1,16 @@
-{
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"type": "object",
-	"name": "Mobile_Robot",
-	"revision": "0.0.1",
-	"description": "Schema of mobile Robot",
-	"id": "123",
+{	
 	"properties": {
-		"name": {
-			"$ref": "#/definitions/name"
-		},
-		"revision": {
-			"type": "string",
-			"pattern": "^\\d*\\.\\d*\\.\\d*$"
-		},
+		"allOf":[
+			{"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/Ressource_schema.json#/properties"
+			}
+		],
 		"description": {
-			"type": "string"
-		},
-		"id": {
 			"type": "string"
 		},
 		"submodels": {
 			"properties": {
-				"capabilities":{
-				"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/capabilities_schema.json#"
+				"capabilities": {
+					"type": "object"
 				},
 				"location": {
 					"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/location.json#"
@@ -42,7 +30,7 @@
 		}
 	},
 	"required": [
-		"submodels"
+		"submodels","revision","ID"
 	],
 	"definitions": {
 		"name": {

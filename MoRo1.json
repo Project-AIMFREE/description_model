@@ -1,8 +1,8 @@
 {
 	"name": "MoRo1",
 	"revision": "0.0.1",
+	"ID":"1234",
 	"description": "Mobile Robot 1",
-	"id": "1234",
 	"submodels": {
 		"capabilities": {
 			"drilling": {},

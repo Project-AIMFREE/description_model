@@ -10,7 +10,7 @@
 			"type": "string"
 		},
 		"properties": {
-			"type": "string"
+			"type": "object"
 		}
 	},
 	"required": [
