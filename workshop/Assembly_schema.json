@@ -1,0 +1,20 @@
+{
+	"allOf": [
+		{
+			"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/productmodel_schema.json#"
+		},
+		{
+			"properties": {
+				"assembly_type_id": {
+					"type": "string"
+				},
+				"assembly_type": {
+					"type": "object"
+				}
+			},
+			"required": [
+				"assembly_type_id"
+			]
+		}
+	]
+}

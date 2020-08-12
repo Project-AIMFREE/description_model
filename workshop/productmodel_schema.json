@@ -1,5 +1,5 @@
 {
 	"allOf":[
-		{"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/workshop/model_schema.json#"}
+		{"$ref": "./model_schema.json#"}
 	]
 }

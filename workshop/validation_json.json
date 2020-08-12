@@ -1,6 +1,8 @@
-{ "id":"test",
+{ 	"$schema": "./product_schema.json",
+	"id":"test",
 	"revision":"0.0.1",
 	"process": "testprocess",
+	"product_type_id":"1234",
 	"planned_start": "20200812_094522",
 	"planned_ressource":"id_or_name",
 	"planned_setup":"id_or_name"
