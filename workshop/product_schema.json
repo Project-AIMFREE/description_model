@@ -1,0 +1,12 @@
+{
+	"allOf":[
+		{"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/workshop/productmodel_schema.json#"},
+		{"properties":{
+			"process": {"type": "string"},
+			"planned_start": {"type": "string"},
+			"planned_ressource":{"type": "string"},
+			"planned_setup":{"type": "string"}
+			}
+		}
+]
+}

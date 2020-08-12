@@ -1,9 +1,0 @@
-{
-	"allOf":[
-		{"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/workshop/modell_schema.json#"},
-{"properties": {
-},
-	"required": ["additional","id","revision"]
-	}
-]
-}
