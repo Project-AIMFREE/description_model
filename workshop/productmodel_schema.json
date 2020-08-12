@@ -1,5 +1,0 @@
-{
-	"allOf":[
-		{"$ref": "./model_schema.json#"}
-	]
-}

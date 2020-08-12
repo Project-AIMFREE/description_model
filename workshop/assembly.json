@@ -1,7 +1,7 @@
 {
 	"allOf": [
 		{
-			"$ref": "https://raw.githubusercontent.com/Jonracwzl/aimfree_models/master/productmodel_schema.json#"
+			"$ref": "./productmodel.json#"
 		},
 		{
 			"properties": {

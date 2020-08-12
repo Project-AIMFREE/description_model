@@ -1,6 +1,6 @@
 {
 	"allOf":[
-		{"$ref": "./productmodel_schema.json#"},
+		{"$ref": "./productmodel.json#"},
 		{"properties":{
 			"product_type_id":{"type":"string"},
 			"product_type": {"type":"object"},

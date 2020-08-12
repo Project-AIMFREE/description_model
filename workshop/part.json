@@ -1,0 +1,28 @@
+{
+	"allOf": [
+		{
+			"$ref": "./productmodel.json#"
+		},
+		{
+			"properties": {
+				"par_type_id": {
+					"type": "string"
+				},
+				"part_type": {
+					"type": "object"
+				},
+				"submodels": {
+					"properties": {
+						"location": {
+							"$ref": "./location.json#"
+						}
+					},
+					"required": ["location"]
+				}
+			},
+			"required": [
+				"assembly_type_id","submodels"
+			]
+		}
+	]
+}
