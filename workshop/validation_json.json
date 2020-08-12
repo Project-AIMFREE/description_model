@@ -1,4 +1,7 @@
 { "id":"test",
-	"additional":"test",
-	"revision":"0.0.1"
+	"revision":"0.0.1",
+	"process": "testprocess",
+	"planned_start": "20200812_094522",
+	"planned_ressource":"id_or_name",
+	"planned_setup":"id_or_name"
 }

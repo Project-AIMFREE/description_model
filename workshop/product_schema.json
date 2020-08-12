@@ -6,7 +6,8 @@
 			"planned_start": {"type": "string"},
 			"planned_ressource":{"type": "string"},
 			"planned_setup":{"type": "string"}
-			}
+			},
+			"required":["process","planned_start","planned_ressource","planned_setup"]
 		}
-]
+	]
 }
