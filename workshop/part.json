@@ -5,23 +5,31 @@
 		},
 		{
 			"properties": {
-				"par_type_id": {
+				"part_type_id": {
 					"type": "string"
 				},
 				"part_type": {
 					"type": "object"
 				},
+				"erp_id":{"type":"string"},
 				"submodels": {
 					"properties": {
 						"location": {
 							"$ref": "./location.json#"
-						}
+						},
+						"size": {
+							"$ref": "./size.json#"
+						},
+						"weight": {
+							"$ref": "./weight.json#"
+						},
+						"state":{"$ref": "./state.json#"}
 					},
 					"required": ["location"]
 				}
 			},
 			"required": [
-				"assembly_type_id","submodels"
+				"part_type_id","submodels"
 			]
 		}
 	]

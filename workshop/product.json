@@ -1,15 +1,36 @@
 {
-	"allOf":[
-		{"$ref": "./productmodel.json#"},
-		{"properties":{
-			"product_type_id":{"type":"string"},
-			"product_type": {"type":"object"},
-			"process": {"type": "string"},
-			"planned_start": {"type": "string"},
-			"planned_ressource":{"type": "string"},
-			"planned_setup":{"type": "string"}
+	"allOf": [
+		{
+			"$ref": "./productmodel.json#"
+		},
+		{
+			"properties": {
+				"product_type_id": {
+					"type": "string"
+				},
+				"product_type": {
+					"type": "object"
+				},
+				"process": {
+					"type": "string"
+				},
+				"planned_start": {
+					"type": "string"
+				},
+				"planned_ressource": {
+					"type": "string"
+				},
+				"planned_setup": {
+					"type": "string"
+				}
 			},
-			"required":["product_type_id", "process","planned_start","planned_ressource","planned_setup"]
+			"required": [
+				"product_type_id",
+				"process",
+				"planned_start",
+				"planned_ressource",
+				"planned_setup"
+			]
 		}
 	]
 }

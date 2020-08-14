@@ -1,0 +1,36 @@
+{
+		"name": "light",
+		"revision": "0.0.1",
+		"description": "describes a single switchable light source",
+		"properties": {
+			"name":{
+			"type": "string"},
+			"light_on": {
+				"type": "boolean",
+				"description": "true if light is on"
+			}
+		},
+		"events": {
+			"light_switched": {
+				"description": "triggered whenever the light is switched, parameter 'state' tells if on or off",
+				"parameters": {
+					"state": {
+						"type": "boolean"
+					}
+				}
+			}
+		},
+		"operations": {
+			"switch_light": {
+				"description": "switches light on if state is set to True, off if state is False, returns true if operation successful",
+				"parameters": {
+					"state": {
+						"type": "boolean"
+					}
+				},
+				"response": {
+					"type": "boolean"
+				}
+			}
+		}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "setup",
+	"revision": "0.0.1",
+	"description": "submodel for different setups of a ressource.",
+	"properties": {},
+	"required": [],
+	"events": {},
+	"operations": {}
+}

@@ -1,0 +1,28 @@
+{
+	"allOf": [
+		{
+			"$ref": "./productmodel.json#"
+		},
+		{
+			"properties": {
+				"submodels": {
+					"properties": {
+						"size": {
+							"$ref": "./size.json#"
+						},
+						"weight": {
+							"$ref": "./weight.json#"
+						},
+						"state": {
+							"$ref": "./state.json#"
+						}
+					},
+					"required": [
+						"size",
+						"weight"
+					]
+				}
+			},"required":["submodels"]
+		}
+	]
+}

@@ -1,0 +1,24 @@
+{
+    "allOf": [
+        {
+            "$ref": "./model.json#"
+        },
+        {
+            "properties": {
+                "submodels": {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            },
+            "required": [
+                "submodels"
+            ]
+        }
+    ]
+}

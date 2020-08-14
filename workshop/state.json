@@ -1,0 +1,22 @@
+{
+	"$schema": "./submodel_schema.json#",
+	"name": "state",
+	"revision": "0.0.1",
+	"description": "describes the current state of a ressource whether it is idle.",
+	"properties": {
+		"state": {
+			"type": "string",
+			"enum": [
+				"init",
+				"idle",
+				"in_process",
+				"paused",
+				"completed",
+				"aborted"
+			]
+		}
+	},
+	"required": [
+		"state"
+	]
+}

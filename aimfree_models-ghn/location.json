@@ -1,0 +1,42 @@
+{
+		"name": "location",
+		"revision": "0.0.1",
+		"description": "a position estimation in 3d space with information about its confidence",
+		"properties": {
+			"pose": {
+				"type": "object",
+				"required": [
+					"location",
+					"confidence"
+				],
+				"properties": {
+					"location": {
+						"description": "the position estimation as object with properties x, y, z",
+						"type": "object",
+						"required": [
+							"x",
+							"y",
+							"z"
+						],
+						"properties": {
+							"x": {
+								"type": "number"
+							},
+							"y": {
+								"type": "number"
+							},
+							"z": {
+								"type": "number"
+							}
+						}
+					},
+					"confidence": {
+						"description": "an information about the confidence of the current position estimation. value between 0 and 1 (limits inclusive)",
+						"type": "number",
+						"minimum": 0.0,
+						"maximum": 1.0
+					}
+				}
+			}
+		}
+}

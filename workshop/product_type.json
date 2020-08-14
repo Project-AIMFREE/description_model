@@ -1,0 +1,29 @@
+{	
+	"allOf":[
+		{"$ref": "./productmodel.json#"
+		},
+		{"properties": 
+		{
+		"submodels": {
+			"properties": {
+				"size": {
+					"$ref": "./size.json#"
+				},
+				"weight": {
+					"$ref": "./weight.json#"
+				},
+				"assembly_type":{
+					"$ref": "./assembly_type.json#"
+				}
+			},
+			"required": [
+				"size",
+				"weight"
+			]
+		}
+	},
+	"required": [
+		"submodels"
+	]}
+]
+}

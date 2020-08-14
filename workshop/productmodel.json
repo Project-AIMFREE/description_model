@@ -1,5 +1,7 @@
 {
-	"allOf":[
-		{"$ref": "./model.json#"}
+	"allOf": [
+		{
+			"$ref": "./model.json#"
+		}
 	]
 }

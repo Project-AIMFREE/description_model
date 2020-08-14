@@ -1,0 +1,38 @@
+{
+	"allOf": [
+		{
+			"$ref": "./productmodel.json#"
+		},
+		{
+			"properties": {
+				"description": {
+					"type": "string"
+				},
+				"submodels": {
+					"properties": {
+						"technology": {
+							"$ref": "./technology.json#"
+						},
+						"precedence": {
+							"$ref": "./process_step_type.json#"
+						},
+						"goal_state": {
+							"type": "string"
+						},
+						"part_type": {
+							"$ref": "./part_type.json#"
+						}
+					},
+					"required": [
+						"technology"
+					]
+				}
+			},
+			"required": [
+				"submodels",
+				"revision",
+				"ID"
+			]
+		}
+	]
+}

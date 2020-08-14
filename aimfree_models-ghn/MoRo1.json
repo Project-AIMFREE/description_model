@@ -1,0 +1,34 @@
+{
+	"name": "MoRo1",
+	"revision": "0.0.1",
+	"ID":"1234",
+	"description": "Mobile Robot 1",
+	"submodels": {
+		"capabilities": {
+			"drilling": {},
+			"grab": {},
+			"move": {}
+		},
+		"state": {
+			"state": "idle"
+		},
+		"location": {
+			"pose": {
+				"location": {
+					"x": 10,
+					"y": 20,
+					"z": 30
+				},
+				"confidence": 0.3
+			}
+		},
+		"light": {
+			"name": "light1",
+			"light_on": true
+		},
+		"light": {
+			"name": "light2",
+			"light_on": true
+		}
+	}
+}
