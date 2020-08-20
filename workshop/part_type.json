@@ -12,9 +12,6 @@
 						},
 						"weight": {
 							"$ref": "./weight.json#"
-						},
-						"state": {
-							"$ref": "./state.json#"
 						}
 					},
 					"required": [

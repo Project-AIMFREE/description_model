@@ -1,0 +1,24 @@
+{
+	"$schema": "../resource_information.json",
+	"name": "Kairos_01",
+	"id": "ABCDE12345",
+	"revision": "0.0.1",
+	"submodels": {
+		"size": {
+			"size": [
+				1,
+				3
+			]
+		},
+		"current_state": {
+			"state": "idle"
+		},
+		"position": {
+			"coordinates": {
+				"x": 10,
+				"y": 20,
+				"z": 0
+			}
+		}
+	}
+}

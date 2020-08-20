@@ -11,12 +11,12 @@
 				"weight": {
 					"$ref": "./weight.json#"
 				},
-				"Part_Type": {
+				"part_type": {
 					"$ref": "./part_type.json#"
 				}
 			},
 			"required": [
-				"Part_Type", "size", "weight"
+				"part_type", "size", "weight"
 			]
 		}
 	},

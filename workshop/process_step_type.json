@@ -5,9 +5,6 @@
 		},
 		{
 			"properties": {
-				"description": {
-					"type": "string"
-				},
 				"submodels": {
 					"properties": {
 						"technology": {
@@ -29,9 +26,7 @@
 				}
 			},
 			"required": [
-				"submodels",
-				"revision",
-				"ID"
+				"submodels"
 			]
 		}
 	]

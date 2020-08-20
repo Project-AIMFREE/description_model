@@ -1,7 +1,7 @@
 {
     "allOf": [
         {
-            "$ref": "./model.json#"
+            "$ref": "./productmodel.json#"
         },
         {
             "properties": {

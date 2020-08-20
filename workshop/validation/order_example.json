@@ -1,0 +1,100 @@
+{
+	"$schema": "../order.json",
+	"id": "AFASD",
+	"name": "product_move",
+	"revision": "0.0.1",
+	"customer": "WZL",
+	"order_no": "1234567",
+	"earliest_start_date": "20200101_153217",
+	"last_finish_date": "20200101_154000",
+	"amount": 1,
+	"product_type": {
+		"id": "ABC1234",
+		"revision": "0.0.1",
+		"submodels": {
+			"process_type": {
+				"id": "ABCD123",
+				"revision": "0.0.1",
+				"submodels": {
+					"process_step_type": {
+						"name": "MANIPULATOR_TASK_FIRST",
+						"description": "Manipulator pick, place and back to original pose",
+						"id": "BCD123",
+						"revision": "0.0.1",
+						"submodels": {
+							"goal_state": "Object picked and placed",
+							"technology": {
+								"id": "ABC123",
+								"revision": "0.0.1",
+								"submodels": {
+									"name": "MANIPULATOR_PICK"
+								}
+							}
+						}
+					}
+				}
+			},
+			"assembly_type": {
+				"name": "ABCDEF",
+				"id": "ABCD1234",
+				"revision": "0.0.1",
+				"submodels": {
+					"part_type": {
+						"name": "ABC",
+						"id": "ABCD1234",
+						"revision": "0.0.1",
+						"submodels": {
+							"size": {
+								"size": [
+									10,
+									20,
+									50
+								]
+							},
+							"weight": {
+								"weight": 50
+							}
+						}
+					},
+					"part_type": {
+						"name": "DEF",
+						"id": "ABCD1234",
+						"revision": "0.0.1",
+						"submodels": {
+							"size": {
+								"size": [
+									10,
+									20,
+									50
+								]
+							},
+							"weight": {
+								"weight": 50
+							}
+						}
+					},
+					"size": {
+						"size": [
+							13,
+							20,
+							50
+						]
+					},
+					"weight": {
+						"weight": 50
+					}
+				}
+			},
+			"size": {
+				"size": [
+					13,
+					20,
+					50
+				]
+			},
+			"weight": {
+				"weight": 40
+			}
+		}
+	}
+}

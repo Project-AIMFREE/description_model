@@ -4,7 +4,7 @@
 	"revision": "0.0.1",
 	"description": "describes the current state of a ressource whether it is idle.",
 	"properties": {
-		"state": {
+		"current_state": {
 			"type": "string",
 			"enum": [
 				"init",
@@ -17,6 +17,6 @@
 		}
 	},
 	"required": [
-		"state"
+		"current_state"
 	]
 }

@@ -5,18 +5,16 @@
 		},
 		{
 			"properties": {
-				"product_type_id": {
-					"type": "string"
-				},
 				"product_type": {
-					"type": "object"
+					"$ref": "./product_type.json#"
 				},
 				"process": {
-					"type": "string"
+					"$ref": "./process.json#"
 				},
 				"planned_start": {
 					"type": "string"
 				},
+				######Verschieben in Process
 				"planned_ressource": {
 					"type": "string"
 				},
@@ -25,7 +23,6 @@
 				}
 			},
 			"required": [
-				"product_type_id",
 				"process",
 				"planned_start",
 				"planned_ressource",

@@ -1,7 +1,7 @@
 {
 	"allOf": [
 		{
-			"$ref": "./productmodel.json#"
+			"$ref": "./model.json#"
 		},
 		{
 			"properties": {
@@ -10,20 +10,17 @@
 						"size": {
 							"$ref": "./size.json#"
 						},
-						"weight": {
-							"$ref": "./weight.json#"
+						"position":{
+							"$ref": "./position.json#"
 						},
-						"assembly_type": {
-							"$ref": "./assembly_type.json#"
-						},
-						"process_type": {
-							"$ref": "./process_type.json#"
+						"state":{
+							"$ref": "./state.json#"
 						}
 					},
 					"required": [
 						"size",
-						"weight",
-						"process_type"
+						"current_state",
+						"position"
 					]
 				}
 			},
