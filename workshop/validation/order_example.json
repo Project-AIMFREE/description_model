@@ -38,6 +38,7 @@
 						"id": "BCD124",
 						"revision": "0.0.1",
 						"submodels": {
+							"precedence": ["BCD123"],
 							"goal_state": "Object picked and placed",
 							"technology": {
 								"id": "ABC123",

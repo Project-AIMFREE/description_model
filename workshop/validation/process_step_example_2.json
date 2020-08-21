@@ -11,11 +11,16 @@
 		"id": "BCD124",
 		"revision": "0.0.1",
 		"goal_available": "false",
+		"type":"MANIPULATOR_TASK",
 		"submodels": {
 			"technology": {
 				"id": "ABCD1234",
 				"revision": "0.0.1",
-				"submodels": {}
+				"submodels": {
+					"manipulator_func_name": "NONE",
+					"platform_func_name": "NONE",
+					"goal_state": "false"
+				}
 			},
 			"goal": {
 				"position": {
@@ -30,9 +35,6 @@
 					"w": 1.1
 				}
 			},
-			"manipulator_func_name": "NONE",
-			"platform_func_name": "NONE",
-			"goal_state": "false",
 			"part_type": {
 				"id": "ABCD1234",
 				"revision": "0.0.1",
@@ -49,17 +51,7 @@
 					}
 				}
 			},
-			"precedence": {
-				"id": "ABCD1234",
-				"revision": "0.0.1",
-				"submodels": {
-					"technology": {
-						"id": "ABCD1234",
-						"revision": "0.0.1",
-						"submodels": {}
-					}
-				}
-			}
+			"precedence": ["BCD123"]
 		}
 	}
 }

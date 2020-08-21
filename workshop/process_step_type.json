@@ -17,7 +17,10 @@
 							"$ref": "./technology.json#"
 						},
 						"precedence": {
-							"$ref": "./process_step_type.json#"
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
 						},
 						"part_type": {
 							"$ref": "./part_type.json#"
