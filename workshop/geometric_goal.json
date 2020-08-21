@@ -1,0 +1,42 @@
+{
+    "$schema": "./model.json#",
+    "name": "geometric_goal",
+    "id": "string",
+    "revision": "0.0.1",
+    "description": "describes the goal position and orientation",
+    "properties": {
+        "submodels":{
+            "properties": {
+                "position":{
+                    "properties":{
+                        "x":{
+                            "type": "number"
+                        },
+                        "y":{
+                            "type": "number"
+                        },
+                        "z":{
+                            "type": "number"
+                        }
+                    }
+                },
+                "orientation":{
+                    "properties":{
+                        "x":{
+                            "type": "number"
+                        },
+                        "y":{
+                            "type": "number"
+                        },
+                        "z":{
+                            "type": "number"
+                        },
+                        "w":{
+                            "type": "number"
+                        }
+                }
+            }
+        }
+    }
+    }
+}

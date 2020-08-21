@@ -6,21 +6,16 @@
 	"end_time": "20200820_104600",
 	"ressource_id": "KAIROS01",
 	"process_step_type": {
-		"name": "MANIPULATOR_TASK_FIRST",
+		"name": "MANIPULATOR_TASK_SECOND",
 		"description": "Manipulator pick, place and back to original pose",
-		"id": "BCD123",
+		"id": "BCD124",
 		"revision": "0.0.1",
 		"goal_available": "false",
-		"type":"MANIPULATOR_TASK",
 		"submodels": {
 			"technology": {
 				"id": "ABCD1234",
 				"revision": "0.0.1",
-				"submodels": {
-					"manipulator_func_name": "NONE",
-					"platform_func_name": "NONE",
-					"goal_state": "false"
-				}
+				"submodels": {}
 			},
 			"goal": {
 				"position": {
@@ -35,6 +30,9 @@
 					"w": 1.1
 				}
 			},
+			"manipulator_func_name": "NONE",
+			"platform_func_name": "NONE",
+			"goal_state": "false",
 			"part_type": {
 				"id": "ABCD1234",
 				"revision": "0.0.1",
@@ -48,6 +46,17 @@
 					},
 					"weight": {
 						"weight": 50
+					}
+				}
+			},
+			"precedence": {
+				"id": "ABCD1234",
+				"revision": "0.0.1",
+				"submodels": {
+					"technology": {
+						"id": "ABCD1234",
+						"revision": "0.0.1",
+						"submodels": {}
 					}
 				}
 			}

@@ -18,8 +18,24 @@
 				"submodels": {
 					"process_step_type": {
 						"name": "MANIPULATOR_TASK_FIRST",
-						"description": "Manipulator pick, place and back to original pose",
+						"description": "Manipulator pick - place and back to original pose",
 						"id": "BCD123",
+						"revision": "0.0.1",
+						"submodels": {
+							"goal_state": "Object picked and placed",
+							"technology": {
+								"id": "ABC123",
+								"revision": "0.0.1",
+								"submodels": {
+									"name": "MANIPULATOR_PICK"
+								}
+							}
+						}
+					},
+					"process_step_type": {
+						"name": "MANIPULATOR_TASK_SECOND",
+						"description": "Manipulator pick - place and back to original pose",
+						"id": "BCD124",
 						"revision": "0.0.1",
 						"submodels": {
 							"goal_state": "Object picked and placed",
@@ -58,7 +74,7 @@
 					},
 					"part_type": {
 						"name": "DEF",
-						"id": "ABCD1234",
+						"id": "ABCD1235",
 						"revision": "0.0.1",
 						"submodels": {
 							"size": {

@@ -19,7 +19,7 @@
 				}
 			},
 			"required": [
-				"process_step_type"
+				"process_step_type", "ressource_id"
 			]
 		}
 	]

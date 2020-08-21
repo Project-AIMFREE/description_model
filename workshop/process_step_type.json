@@ -5,6 +5,12 @@
 		},
 		{
 			"properties": {
+				"goal_available":{
+					"type": "string"
+				},
+				"type":{
+					"type": "string"
+				},
 				"submodels": {
 					"properties": {
 						"technology": {
@@ -13,11 +19,11 @@
 						"precedence": {
 							"$ref": "./process_step_type.json#"
 						},
-						"goal_state": {
-							"type": "string"
-						},
 						"part_type": {
 							"$ref": "./part_type.json#"
+						},
+						"goal":{
+							"$ref": "./geometric_goal.json#"
 						}
 					},
 					"required": [

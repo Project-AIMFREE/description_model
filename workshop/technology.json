@@ -9,11 +9,20 @@
                     "properties": {
                         "name": {
                             "type": "string"
+                        },
+                        "goal_state": {
+							"type": "string"
+                        },
+                        "manipulator_func_name": {
+                            "type": "string"    
+                        },
+					    "platform_func_name":{
+                            "type":"string"
                         }
                     }
                 },
                 "required": [
-                    "name"
+                    "name", "goal_state"
                 ]
             },
             "required": [
