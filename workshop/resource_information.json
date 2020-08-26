@@ -19,7 +19,7 @@
 					},
 					"required": [
 						"size",
-						"current_state",
+						"state",
 						"position"
 					]
 				}

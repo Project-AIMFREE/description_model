@@ -10,8 +10,8 @@
 				3
 			]
 		},
-		"current_state": {
-			"state": "idle"
+		"state": {
+			"current_state": "idle"
 		},
 		"position": {
 			"coordinates": {
