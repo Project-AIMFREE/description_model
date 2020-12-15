@@ -1,0 +1,337 @@
+{
+    "$schema": "../submodels/order.json",
+    "header": {
+        "style": "component",
+        "id": "COM-ORD-001",
+        "name": "Order",
+        "description": "Example order",
+        "revision": "0.0.1"
+    },
+    "body": {
+        "function": {},
+        "component": {
+            "product": {
+                "header": {
+                    "style": "component",
+                    "id": "COM-PRO-001",
+                    "name": "Toy Dog 1",
+                    "description": "Toy Dog with a head and tail.",
+                    "revision": "0.0.1"
+                },
+                "body": {
+                    "function": {},
+                    "component": {
+                        "part": [
+                            {
+                                "header": {
+                                    "style": "component",
+                                    "id": "COM-PAR-001",
+                                    "description": "Part 1 - Body",
+                                    "name": "Part1",
+                                    "revision": "0.0.1"
+                                },
+                                "body": {
+                                    "component": {},
+                                    "function": {},
+                                    "parameter": {
+                                        "part_type_param": {
+                                            "header": {
+                                                "style": "parameter",
+                                                "id": "PAR-PRP-001",
+                                                "description": "Part Type 1 - Body",
+                                                "name": "Part Type 1",
+                                                "revision": "0.0.1"
+                                            },
+                                            "body": {
+                                                "datatype": "string",
+                                                "dimension": "None",
+                                                "range": "None",
+                                                "unit": "None",
+                                                "value": "COM-PAT-001"
+                                            }
+                                        },
+                                        "size": {
+                                            "header": {
+                                                "style": "parameter",
+                                                "id": "PAR-SIZ-001",
+                                                "description": "3-dimensional size of an object in mm",
+                                                "name": "SIZE",
+                                                "revision": "0.0.1"
+                                            },
+                                            "body": {
+                                                "datatype": "int",
+                                                "dimension": "3",
+                                                "range": "",
+                                                "unit": "mm",
+                                                "value": "500"
+                                            }
+                                        }
+                                    },
+                                    "variable": {}
+                                }
+                            },
+                            {
+                                "header": {
+                                    "style": "component",
+                                    "id": "COM-PAR-001",
+                                    "description": "Part 1 - Body",
+                                    "name": "Part1",
+                                    "revision": "0.0.1"
+                                },
+                                "body": {
+                                    "component": {},
+                                    "function": {},
+                                    "parameter": {
+                                        "part_type_param": {
+                                            "header": {
+                                                "style": "parameter",
+                                                "id": "PAR-PRP-002",
+                                                "description": "Part Type 2 - Tail",
+                                                "name": "Part Type 2",
+                                                "revision": "0.0.1"
+                                            },
+                                            "body": {
+                                                "datatype": "string",
+                                                "dimension": "None",
+                                                "range": "None",
+                                                "unit": "None",
+                                                "value": "COM-PAT-002"
+                                            }
+                                        },
+                                        "size": {
+                                            "header": {
+                                                "style": "parameter",
+                                                "id": "PAR-SIZ-002",
+                                                "description": "3-dimensional size of an object in mm",
+                                                "name": "SIZE",
+                                                "revision": "0.0.1"
+                                            },
+                                            "body": {
+                                                "datatype": "int",
+                                                "dimension": "3",
+                                                "range": "",
+                                                "unit": "mm",
+                                                "value": "900"
+                                            }
+                                        }
+                                    },
+                                    "variable": {}
+                                }
+                            }
+                        ],
+                        "process_step": [
+                            {
+                                "header": {
+                                    "style": "component",
+                                    "id": "COM-PRS-001",
+                                    "description": "Process Step 1",
+                                    "name": "Process Step 1",
+                                    "revision": "0.0.1"
+                                },
+                                "body": {
+                                    "component": {},
+                                    "function": {},
+                                    "parameter": {
+                                        "process_step_type_param": {
+                                            "header": {
+                                                "style": "parameter",
+                                                "id": "PAR-PTP-001",
+                                                "description": "Process Step 1",
+                                                "name": "Process Step 1",
+                                                "revision": "0.0.1"
+                                            },
+                                            "body": {
+                                                "datatype": "string",
+                                                "dimension": "None",
+                                                "range": "None",
+                                                "unit": "None",
+                                                "value": "COM-PST-001"
+                                            }
+                                        }
+                                    },
+                                    "variable": {
+                                        "state": {
+                                            "header": {
+                                                "style": "variable",
+                                                "id": "VAR-STA-002",
+                                                "description": "Current State of the Component.",
+                                                "name": "State",
+                                                "revision": "0.0.1"
+                                            },
+                                            "body": {
+                                                "datatype": "",
+                                                "dimension": "",
+                                                "range": "",
+                                                "timestamp": "TimeStampPattern",
+                                                "uncertainty": "None",
+                                                "unit": "None",
+                                                "value": "in_process"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "header": {
+                                    "style": "component",
+                                    "id": "COM-PRS-002",
+                                    "description": "Process Step 2",
+                                    "name": "Process Step 2",
+                                    "revision": "0.0.1"
+                                },
+                                "body": {
+                                    "component": {},
+                                    "function": {},
+                                    "parameter": {
+                                        "process_step_type_param": {
+                                            "header": {
+                                                "style": "parameter",
+                                                "id": "PAR-PTP-002",
+                                                "description": "Process Step Type 2",
+                                                "name": "Process Step Type 2",
+                                                "revision": "0.0.1"
+                                            },
+                                            "body": {
+                                                "datatype": "string",
+                                                "dimension": "None",
+                                                "range": "None",
+                                                "unit": "None",
+                                                "value": "COM-PST-001"
+                                            }
+                                        }
+                                    },
+                                    "variable": {
+                                        "state": {
+                                            "header": {
+                                                "style": "variable",
+                                                "id": "VAR-STA-003",
+                                                "description": "Current State of the Component.",
+                                                "name": "State",
+                                                "revision": "0.0.1"
+                                            },
+                                            "body": {
+                                                "datatype": "",
+                                                "dimension": "",
+                                                "range": "",
+                                                "timestamp": "TimeStampPattern",
+                                                "uncertainty": "None",
+                                                "unit": "None",
+                                                "value": "idle"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "variable": {
+                        "state": {
+                            "header": {
+                                "style": "variable",
+                                "id": "VAR-STA-001",
+                                "name": "State",
+                                "description": "Current State of the Component.",
+                                "revision": "0.0.1"
+                            },
+                            "body": {
+                                "datatype": "",
+                                "dimension": "",
+                                "range": "",
+                                "timestamp": "TimeStampPattern",
+                                "uncertainty": "None",
+                                "unit": "None",
+                                "value": "idle"
+                            }
+                        }
+                    },
+                    "parameter": {
+                        "product_type_param": {
+                            "header": {
+                                "style": "parameter",
+                                "description": "",
+                                "id": "PAR-PRT-001",
+                                "name": "",
+                                "revision": "0.0.1"
+                            },
+                            "body": {
+                                "value": "COM-PDT-001",
+                                "dimension": "None",
+                                "range": "None",
+                                "datatype": "string",
+                                "unit": "None"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "variable": {
+            "current_lateness": {
+                "header": {
+                    "id": "PAR-ESD-001",
+                    "name": "ESD - earliest starting date",
+                    "description": "Date the order can start to be assembled",
+                    "style": "parameter",
+                    "revision": "01.01.01"
+                },
+                "body": {
+                    "datatype": "date",
+                    "value": "30102020145300",
+                    "range": "10",
+                    "dimension": "1",
+                    "unit": "seconds"
+                }
+            }
+        },
+        "parameter": {
+            "earliest_start_date": {
+                "header": {
+                    "id": "PAR-ESD-002",
+                    "name": "ESD - earliest starting date",
+                    "description": "Date the order can start to be assembled",
+                    "style": "parameter",
+                    "revision": "01.01.01"
+                },
+                "body": {
+                    "datatype": "date",
+                    "value": "30102020145300",
+                    "range": "10",
+                    "dimension": "1",
+                    "unit": "seconds"
+                }
+            },
+            "last_finish_date": {
+                "header": {
+                    "id": "PAR-ESD-003",
+                    "name": "ESD - earliest starting date",
+                    "description": "Date the order can start to be assembled",
+                    "revision": "01.01.01",
+                    "style": "parameter"
+                },
+                "body": {
+                    "datatype": "date",
+                    "value": "30102020145300",
+                    "range": "9",
+                    "dimension": "1",
+                    "unit": "seconds"
+                }
+            },
+            "quantity": {
+                "body": {
+                    "datatype": "date",
+                    "value": "30102020145300",
+                    "range": "9",
+                    "dimension": "1",
+                    "unit": "seconds"
+                },
+                "header": {
+                    "id": "PAR-ESD-002",
+                    "name": "ESD - earliest starting date",
+                    "description": "Date the order can start to be assembled",
+                    "revision": "01.01.01",
+                    "style": "parameter"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "allOf": [
+        {
+            "$ref": "./model.json#"
+        },
+        {
+            "properties": {
+                "header": {
+                    "properties": {
+                        "style": {
+                            "const": "component"
+                        },
+                        "id": {
+                            "pattern": "^COM-PST-[0-9]{3}$"
+                        }
+                    }
+                },
+                "body": {
+                    "properties": {
+                        "parameter": {
+                            "properties": {
+                                "precedence": {
+                                    "$ref": "./precedence.json#"
+                                },
+                                "capability": {
+                                    "$ref": "./capability.json#"
+                                },
+                                "capability_input": {
+                                    "$ref": "./capability_input.json#"
+                                }
+                            },
+                            "required": [
+                                "capability",
+                                "capability_input"
+                            ],
+                            "additionalProperties": false
+                        },
+                        "variable": {"additionalProperties": false},
+                        "function": {"additionalProperties": false},
+                        "component": {"additionalProperties": false}
+                    }
+                }
+            }
+        }
+    ]
+}

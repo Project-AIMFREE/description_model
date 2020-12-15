@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "allOf": [
+        {
+            "$ref:": "./model.json#"
+        },
+        {
+            "properties": {
+                "header": {
+                    "properties": {
+                        "style": {
+                            "const": "variable"
+                        },
+                        "description": {
+                            "const": "Current State of the Component."
+                        },
+                        #### insert 3 letter description your id should contain at 'XXX' ####
+                        "id": {
+                            "pattern": "^VAR-XXX-[0-9]{3}$"
+                        },
+                        "name": {
+                            "const": "State"
+                        }
+                    }
+                },
+                "body": {
+                    #### insert your specific requirements for variable properties #####
+                    "properties": {
+                        "datatype": {
+                            "const": "date"
+                        },
+                        "dimension": {
+                            "const": "1"
+                        },
+                        "range": {
+                            "pattern": "[0-9]"
+                        },
+                        "unit": {
+                            "const": "seconds"
+                        },
+                        "value": {
+                            "enum": [
+                                "init",
+                                "idle",
+                                "in_process",
+                                "paused",
+                                "completed",
+                                "aborted"
+                            ]
+                        },
+                        "uncertainty": {},
+                        "timestamp": {}
+                    }
+                }
+            }
+        }
+    ]
+}

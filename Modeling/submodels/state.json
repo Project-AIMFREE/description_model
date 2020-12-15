@@ -1,0 +1,60 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "allOf": [
+        {
+            "$ref": "./model.json#"
+        },
+        {
+            "properties": {
+                "header": {
+                    "properties": {
+                        "style": {
+                            "const": "variable"
+                        },
+                        "description": {
+                            "const": "Current State of the Component."
+                        },
+                        "id": {
+                            "pattern": "^VAR-STA-[0-9]{3}$"
+                        },
+                        "name": {
+                            "const": "State"
+                        }
+                    }
+                },
+                "body": {
+                    "properties": {
+                        "datatype": {
+                            "const": ""
+                        },
+                        "dimension": {
+                            "const": ""
+                        },
+                        "range": {
+                            "const": ""
+                        },
+                        "unit": {
+                            "const": "None"
+                        },
+                        "value": {
+                            "enum": [
+                                "init",
+                                "idle",
+                                "in_process",
+                                "paused",
+                                "completed",
+                                "aborted"
+                            ]
+                        },
+                        "uncertainty": {
+                            "const": "None"
+                        },
+                        "timestamp": {
+                            "const": "TimeStampPattern"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

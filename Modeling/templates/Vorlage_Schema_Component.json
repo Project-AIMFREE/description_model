@@ -1,0 +1,73 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"allOf": [
+		{
+			"$ref": "./model.json#"
+		},
+		{
+			"properties": {
+				"header": {
+					"properties": {
+						"style": {
+							"const": "component"
+						}
+					},
+					"id": {
+                        #### insert 3 letter description your id should contain at 'XXX' ####
+                        "pattern": "^COM-XXX-[0-9]{3}$"
+					}
+				},
+				"body": {
+					"properties": {
+						"parameter": {
+							"properties": {
+                                #### insert your specific parameter submodels here #####
+                                #### include link to submodel in $ref ####
+								"earliest_start_date": {
+									"$ref": "./esd.json#"
+								}
+							},
+							"required": [
+                                #### Include required submodels here ####
+                                "earliest_start_date"
+							],
+                            ### change value to true, if additional submodels in parameters are allowed (not recommended) ###
+							"additionalProperties": false
+						},
+						"variable": {
+							"properties": {
+                                #### insert your specific variable submodels here #####
+                                #### include link to submodel in $ref ####
+								"current_lateness": {
+									"$ref": "./esd.json#"
+								}
+							},
+							"required": [
+                                #### Include required submodels here ####
+								"current_lateness"
+							],
+                            ### change value to true, if additional submodels in variables are allowed (not recommended) ###
+                            "additionalProperties": false
+						},
+						"function": {},
+						"component": {
+							"properties": {
+                                #### insert your specific variable submodels here #####
+                                #### include link to submodel in $ref ####
+								"product": {
+									"$ref": "./esd.json#"
+								}
+							},
+							"required": [
+                                #### Include required submodels here ####
+								"product"
+							],
+                            ### change value to true, if additional submodels in components are allowed (not recommended) ###
+                            "additionalProperties": false
+						}
+					}
+				}
+			}
+		}
+	]
+}

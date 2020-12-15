@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "allOf": [
+        {
+            "$ref": "./model.json#"
+        },
+        {
+            "properties": {
+                "header": {
+                    "properties": {
+                        "style": {
+                            "const": "parameter"
+                        },
+                        "id": {
+                            "pattern": "^PAR-PRT-[0-9]{3}$"
+                        }
+                    }
+                },
+                "body": {
+                    "properties": {
+                        "value": {
+                            "pattern": "^COM-PDT-[0-9]{3}$"
+                        },
+                        "dimension": {
+                            "const": "None"
+                        },
+                        "range": {
+                            "const": "None"
+                        },
+                        "datatype": {
+                            "const": "string"
+                        },
+                        "unit": {
+                            "const": "None"
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            }
+        }
+    ]
+}

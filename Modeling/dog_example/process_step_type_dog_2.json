@@ -1,0 +1,65 @@
+{
+    "$schema": "../submodels/process_step_type.json",
+    "header": {
+        "style": "component",
+        "id": "COM-PST-002",
+        "name": "dog_type_01",
+        "description": "Process step 2 of dog",
+        "revision": "0.0.1"
+    },
+    "body": {
+        "function": {},
+        "component": {},
+        "variable": {},
+        "parameter": {
+            "capability": {
+                "body": {
+                    "value": "COM-CAP-002",
+                    "unit": "",
+                    "range": "",
+                    "dimension": "1",
+                    "datatype": "string"
+                },
+                "header": {
+                    "id": "PAR-CAP-001",
+                    "style": "parameter",
+                    "name": "CAPABILITY",
+                    "revision": "01.01.01",
+                    "description": "Capability required to perform a process step"
+                }
+            },
+            "capability_input": {
+                "body": {
+                    "datatype": "int",
+                    "dimension": "1",
+                    "range": "[0-5]",
+                    "unit": "Nm",
+                    "value": "2"
+                },
+                "header": {
+                    "description": "Further parameters for capability input",
+                    "revision": "01.01.01",
+                    "name": "CAPABILITY_INPUT",
+                    "style": "parameter",
+                    "id": "PAR-CAI-001"
+                }
+            },
+            "precedence": {
+                "header": {
+                    "id": "PAR-PRE-001",
+                "style":"parameter",
+                "name":"Precedence",
+                "revision": "01.01.01",
+                "description": "ID of process step that has to be performed beforehand"
+                },
+                "body": {
+                    "value": "COM-PST-001",
+                    "unit": "",
+                    "range": "",
+                    "dimension": "1",
+                    "datatype": "string"
+                }
+            }
+        }
+    }
+}

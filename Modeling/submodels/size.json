@@ -1,0 +1,40 @@
+{
+    "allOf": [
+        {
+            "$ref": "./model.json#"
+        },
+        {
+            "properties": {
+                "header": {
+                    "properties": {
+                        "style": {
+                            "const": "parameter"
+                        },
+                        "description": {
+                            "const": "3-dimensional size of an object in mm"
+                        },
+                        "id": {
+							"pattern": "^PAR-SIZ-[0-9]{3}$"
+						},
+                        "name": {
+                            "const": "SIZE"
+                        }
+                    }
+                },
+                "body": {
+                    "properties": {
+                        "datatype": {
+                            "const": "int"
+                        },
+                        "dimension": {
+                            "const": "3"
+                        },
+                        "unit": {
+                            "const": "mm"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

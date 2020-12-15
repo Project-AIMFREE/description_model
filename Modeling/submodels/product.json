@@ -1,0 +1,74 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"allOf": [
+		{
+			"$ref": "./model.json#"
+		},
+		{
+			"properties": {
+				"header": {
+					"properties": {
+						"style": {
+							"const": "component"
+						},
+						"id": {
+							"pattern": "^COM-PRO-[0-9]{3}$"
+						}
+					}
+				},
+				"body": {
+					"properties": {
+						"parameter": {
+							"properties": {
+								"product_type_param": {
+									"$ref": "./product_type_param.json#"
+								}
+							},
+							"required": [
+								"product_type_param"
+							],
+							"additionalProperties": false
+						},
+						"variable": {
+							"properties": {
+								"state": {
+									"$ref": "./state.json#"
+								}
+							},
+							"required": [
+								"state"
+							],
+							"additionalProperties": false
+						},
+						"function": {
+							"additionalProperties": false
+						},
+						"component": {
+							"properties": {
+								"part": {
+									"type": "array",
+									"items": {
+										"$ref": "./part.json#"
+									},
+									"additionalItems": false
+								},
+								"process_step": {
+									"type": "array",
+									"items": {
+										"$ref": "./process_step.json"
+									},
+									"additionalItems": false
+								}
+							},
+							"required": [
+								"part",
+								"process_step"
+							],
+							"additionalProperties": false
+						}
+					}
+				}
+			}
+		}
+	]
+}

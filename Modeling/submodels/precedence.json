@@ -1,0 +1,40 @@
+{
+    "allOf": [
+        {
+            "$ref": "./model.json#"
+        },
+        {
+            "properties": {
+                "header": {
+                    "properties": {
+                        "style": {
+                            "const": "parameter"
+                        },
+                        "description": {
+                            "const": "ID of process step that has to be performed beforehand"
+                        },
+                        "id": {
+                            "pattern": "^PAR-PRE-[0-9]{3}$"
+                        },
+                        "name": {
+                            "const": "Precedence"
+                        }
+                    }
+                },
+                "body": {
+                    "properties": {
+                        "datatype": {
+                            "const": "string"
+                        },
+                        "dimension": {
+                            "const": "1"
+                        },
+                        "value":{
+                            "pattern":"^COM-PST-[0-9]{3}$"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

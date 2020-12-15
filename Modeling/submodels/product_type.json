@@ -1,0 +1,53 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"allOf": [
+		{
+			"$ref": "./model.json#"
+		},
+		{
+			"properties": {
+				"header": {
+					"properties": {
+						"style": {
+							"const": "component"
+						},
+						"id": {
+							"pattern": "^COM-PDT-[0-9]{3}$"
+						}
+					}
+				},
+				"body": {
+					"properties": {
+						"parameter": {
+							"properties": {
+								"size": {
+									"$ref": "./size.json#"
+								},
+								"weight": {
+									"$ref": "./weight.json#"
+								}
+							},
+							"required": [
+								"size",
+								"weight"
+							],
+							"additionalProperties": false
+						},
+						"component": {
+							"properties": {
+								"process_step_type": {
+									"type": "array",
+									"item":{
+									"$ref": "./Process_step_type.json#"}
+								}
+							},
+							"required": [
+								"process_step_type"
+							]
+						}
+					}
+				}
+			}
+		}
+	]
+}

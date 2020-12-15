@@ -1,0 +1,49 @@
+{
+    "$schema": "../submodels/part_type.json",
+    "header": {
+        "style": "component",
+        "id": "COM-PAT-001",
+        "name": "Dog Body Part",
+        "description": "Body Part of Dog",
+        "revision": "0.0.1"
+    },
+    "body": {
+        "function": {},
+        "variable": {},
+        "component": {},
+        "parameter": {
+            "size": {
+                "header": {
+                    "id": "PAR-SIZ-001",
+                    "revision": "01.01.01",
+                    "style": "parameter",
+                    "description": "3-dimensional size of an object in mm",
+                    "name": "SIZE"
+                },
+                "body": {
+                    "datatype": "int",
+                    "dimension": "3",
+                    "range": "[10000,10000,10000]",
+                    "unit": "mm",
+                    "value": "[100,200,500]"
+                }
+            },
+            "weight": {
+                "header": {
+                    "description": "Weight of an object in gramm.",
+                    "id": "PAR-WGT-001",
+                    "name": "WEIGHT",
+                    "style": "parameter",
+                    "revision": "01.01.01"
+                },
+                "body": {
+                    "datatype": "int",
+                    "dimension": "1",
+                    "range": "500",
+                    "unit": "gramm",
+                    "value": "500"
+                }
+            }
+        }
+    }
+}

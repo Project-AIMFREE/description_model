@@ -1,0 +1,376 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+		"header": {
+			"$ref": "#/definitions/header",
+			"allOf": [
+				{
+					"if": {
+						"properties": {
+							"style": {
+								"const": "component"
+							}
+						}
+					},
+					"then": {
+						"properties": {
+							"id": {
+								"pattern": "^COM-[A-Z]{3}-([0-9]{3})$"
+							}
+						}
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"style": {
+								"const": "parameter"
+							}
+						}
+					},
+					"then": {
+						"properties": {
+							"id": {
+								"pattern": "^PAR-[A-Z]{3}-([0-9]{3})$"
+							}
+						}
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"style": {
+								"const": "variable"
+							}
+						}
+					},
+					"then": {
+						"properties": {
+							"id": {
+								"pattern": "^VAR-[A-Z]{3}-([0-9]{3})$"
+							}
+						}
+					}
+				},
+				{
+					"if": {
+						"properties": {
+							"style": {
+								"const": "function"
+							}
+						}
+					},
+					"then": {
+						"properties": {
+							"id": {
+								"pattern": "^FUN-[A-Z]{3}-([0-9]{3})$"
+							}
+						}
+					}
+				}
+			]
+		},
+		"body": {}
+	},
+	"allOf": [
+		{
+			"if": {
+				"properties": {
+					"header": {
+						"properties": {
+							"style": {
+								"const": "parameter"
+							}
+						}
+					}
+				}
+			},
+			"then": {
+				"properties": {
+					"body": {
+						"$ref": "#definitions/parameter/body"
+					}
+				}
+			}
+		},
+		{
+			"if": {
+				"properties": {
+					"header": {
+						"properties": {
+							"style": {
+								"const": "variable"
+							}
+						}
+					}
+				}
+			},
+			"then": {
+				"properties": {
+					"body": {
+						"$ref": "#definitions/variable/body"
+					}
+				}
+			}
+		},
+		{
+			"if": {
+				"properties": {
+					"header": {
+						"properties": {
+							"style": {
+								"const": "component"
+							}
+						}
+					}
+				}
+			},
+			"then": {
+				"properties": {
+					"body": {
+						"$ref": "#definitions/component/body"
+					}
+				}
+			}
+		},
+		{
+			"if": {
+				"properties": {
+					"header": {
+						"properties": {
+							"style": {
+								"const": "function"
+							}
+						}
+					}
+				}
+			},
+			"then": {
+				"properties": {
+					"body": {
+						"$ref": "#definitions/function/body"
+					}
+				}
+			}
+		}
+	],
+	"required": [
+		"header",
+		"body"
+	],
+	"definitions": {
+		"header": {
+			"properties": {
+				"revision": {
+					"$ref": "#/definitions/revision"
+				},
+				"name": {},
+				"description": {},
+				"id": {
+					"type": "string"
+				},
+				"style": {
+					"enum": [
+						"component",
+						"variable",
+						"parameter",
+						"function"
+					]
+				}
+			},
+			"required": [
+				"description",
+				"name",
+				"revision",
+				"id",
+				"style"
+			]
+		},
+		"parameter": {
+			"body": {
+				"properties": {
+					"datatype": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					},
+					"range": {
+						"type": "string"
+					},
+					"dimension": {
+						"type": "string"
+					},
+					"unit": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"dimension",
+					"value",
+					"unit",
+					"range",
+					"datatype"
+				]
+			}
+		},
+		"variable": {
+			"body": {
+				"properties": {
+					"uncertainty": {
+						"type": "string"
+					},
+					"timestamp": {
+						"type": "string"
+					},
+					"range": {
+						"type": "string"
+					},
+					"dimension": {
+						"type": "string"
+					},
+					"unit": {
+						"type": "string"
+					},
+					"value": {
+						"type": "string"
+					},
+					"datatype": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"uncertainty",
+					"timestamp",
+					"dimension",
+					"value",
+					"unit",
+					"range",
+					"datatype"
+				]
+			}
+		},
+		"function": {
+			"body": {
+				"properties": {
+					"arguments": {
+						"type": "string"
+					},
+					"returns": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"arguments",
+					"returns"
+				]
+			}
+		},
+		"component": {
+			"body": {
+				"properties": {
+					"function": {
+						"type": "object",
+						"item": {
+							"allOf": [
+								{
+									"$ref": "./model.json#"
+								},
+								{
+									"properties": {
+										"header": {
+											"properties": {
+												"style": {
+													"const": "function"
+												}
+											}
+										}
+									}
+								}
+							]
+						}
+					},
+					"variable": {
+						"type": "object",
+						"item": {
+							"allOf": [
+								{
+									"$ref": "./model.json#"
+								},
+								{
+									"properties": {
+										"header": {
+											"properties": {
+												"style": {
+													"const": "variable"
+												}
+											}
+										}
+									}
+								}
+							]
+						}
+					},
+					"component": {
+						"type": "object",
+						"item": {
+							"allOf": [
+								{
+									"$ref": "./model.json#"
+								},
+								{
+									"properties": {
+										"header": {
+											"properties": {
+												"style": {
+													"const": "component"
+												}
+											}
+										}
+									}
+								}
+							]
+						}
+					},
+					"parameter": {
+						"type": "object",
+						"item": {
+							"allOf": [
+								{
+									"$ref": "./model.json#"
+								},
+								{
+									"properties": {
+										"header": {
+											"properties": {
+												"style": {
+													"const": "parameter"
+												}
+											}
+										}
+									}
+								}
+							]
+						}
+					}
+				},
+				"required": [
+					"variable",
+					"parameter",
+					"function",
+					"component"
+				]
+			}
+		},
+		"name": {
+			"type": "string",
+			"pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+			"minLength": 3
+		},
+		"revision": {
+			"type": "string",
+			"pattern": "^\\d*\\.\\d*\\.\\d*$"
+		}
+	}
+}

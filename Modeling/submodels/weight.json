@@ -1,0 +1,43 @@
+{
+    "allOf": [
+        {
+            "$ref": "./model.json#"
+        },
+        {
+            "properties": {
+                "header": {
+                    "properties": {
+                        "style": {
+                            "const": "parameter"
+                        },
+                        "description": {
+                            "const": "Weight of an object in gramm."
+                        },
+                        "id": {
+							"pattern": "^PAR-WGT-[0-9]{3}$"
+						},
+                        "name": {
+                            "const": "WEIGHT"
+                        }
+                    }
+                },
+                "body": {
+                    "properties": {
+                        "datatype": {
+                            "const": "int"
+                        },
+                        "dimension": {
+                            "const": "1"
+                        },
+                        "range": {
+                            "pattern": "[0-1000000]"
+                        },
+                        "unit": {
+                            "const": "gramm"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

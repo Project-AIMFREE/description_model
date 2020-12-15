@@ -1,0 +1,46 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "allOf": [
+        {
+            "$ref:": "./model.json#"
+        },
+        {
+            "properties": {
+                "header": {
+                    "properties": {
+                        "style": {
+                            "const": "parameter"
+                        },
+                        "description": {
+                            "const": "Date the order can start to be assembled"
+                        },
+                        #### insert 3 letter description your id should contain at 'XXX' ####
+                        "id": {
+                            "pattern": "^PAR-XXX-[0-9]{3}$"
+                        },
+                        "name": {
+                            "const": "ESD - earliest starting date"
+                        }
+                    }
+                },
+                "body": {
+                    #### insert your specific requirements for paramter properties #####
+                    "properties": {
+                        "datatype": {
+                            "const": "date"
+                        },
+                        "dimension": {
+                            "const": "1"
+                        },
+                        "range": {
+                            "pattern": "[0-9]"
+                        },
+                        "unit": {
+                            "const": "seconds"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

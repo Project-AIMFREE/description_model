@@ -1,0 +1,58 @@
+{
+    "$schema": "../submodels/product_type.json",
+    "header": {
+        "style": "component",
+        "id": "COM-PDT-001",
+        "name": "dog_type_01",
+        "description": "Product type of dog 01",
+        "revision": "0.0.1"
+    },
+    "body": {
+        "function": {},
+        "variable": {},
+        "component": {
+            "process_step_type": [
+                {
+                    "$ref": "./process_step_type_dog_1#"
+                },
+                {
+                    "$ref": "./process_step_type_dog_2#"
+                }
+            ]
+        },
+        "parameter": {
+            "size": {
+                "header": {
+                    "id": "PAR-SIZ-001",
+                    "revision": "01.01.01",
+                    "style": "parameter",
+                    "description": "3-dimensional size of an object in mm",
+                    "name": "SIZE"
+                },
+                "body": {
+                    "datatype": "int",
+                    "dimension": "3",
+                    "range": "[10000,10000,10000]",
+                    "unit": "mm",
+                    "value": "[100,200,500]"
+                }
+            },
+            "weight": {
+                "header": {
+                    "description": "Weight of an object in gramm.",
+                    "id": "PAR-WGT-001",
+                    "name": "WEIGHT",
+                    "style": "parameter",
+                    "revision": "01.01.01"
+                },
+                "body": {
+                    "datatype": "int",
+                    "dimension": "1",
+                    "range": "500",
+                    "unit": "gramm",
+                    "value": "500"
+                }
+            }
+        }
+    }
+}
