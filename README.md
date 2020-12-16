@@ -4,14 +4,14 @@ Git project for assembly system description model / information model in the con
 
 ## Content
 
-###Meta-Model
-![meta_model](https://github.com/Project-AIMFREE/description_model/tree/master/Modeling/templates/meta_model.png?raw=true)
+**Meta-Model**
+![meta_model](https://github.com/Project-AIMFREE/description_model/tree/master/Modeling/templates/meta_model.png)
 
-###Ontology
-![ontology](https://github.com/Project-AIMFREE/description_model/tree/master/Modeling/templates/ontology.png?raw=true)
+**Ontology**
+![ontology](https://github.com/Project-AIMFREE/description_model/tree/master/Modeling/templates/ontology.png)
 
-###Dog Use-Case
-![use-case](https://github.com/Project-AIMFREE/description_model/tree/master/Modeling/templates/use_case.png?raw=true)
+**Dog Use-Case**
+![use-case](https://github.com/Project-AIMFREE/description_model/tree/master/Modeling/templates/use_case.png)
 
 ## Contact:
 If you have any questions or remarks, feel free to contact us or visit our [AIMFREE project website](http://aimfree.wzl.rwth-aachen.de/de/default.html).
