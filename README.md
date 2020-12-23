@@ -16,6 +16,9 @@ Git project for assembly system description model / information model in the con
 ## Contact:
 If you have any questions or remarks, feel free to contact us or visit our [AIMFREE project website](http://aimfree.wzl.rwth-aachen.de/de/default.html).
 
+
 j.rachner@wzl.rwth-aachen.de
+
 Laboratory for Machine Tools and Production Engineering WZL of RWTH Aachen
+
 Chair of Production Metrology and Quality Management
